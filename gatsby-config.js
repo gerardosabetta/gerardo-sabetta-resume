@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Gerardo Sabetta Resume",
+    title: `Gerardo Sabetta | Web developer`,
+    description: `Profesional Web developer, frontend engineer, web developer and online educator`,
+    author: `@gerardosabetta`,
+    siteUrl: "https://www.gerardosabetta.com/",
   },
   plugins: [
     "gatsby-plugin-theme-ui",
@@ -14,10 +17,20 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        name: `gerardo-sabetta-resume`,
+        short_name: `Gerardo Sabetta`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon.png`,
+        icon_options: {
+          purpose: `any maskable`,
+        },
       },
     },
     "gatsby-plugin-mdx",
@@ -40,4 +53,4 @@ module.exports = {
       __key: "pages",
     },
   ],
-};
+}
